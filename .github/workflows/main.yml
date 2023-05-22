@@ -29,6 +29,6 @@ jobs:
     - name: Build project
       run: xcodebuild clean build -workspace CleverTapSDK.xcworkspace -scheme CleverTapSDK
 
-#     - name: Run tests
-#       run: xcodebuild test -workspace YourProject.xcworkspace -scheme YourScheme -destination 'platform=iOS Simulator,OS=14.5,name=iPhone 12'
+    - name: Run tests
+      run: xcodebuild test -workspace CleverTapSDK.xcworkspace -scheme CleverTapSDKTests -destination 'platform=iOS Simulator,OS=14.5,name=iPhone 12'
 
