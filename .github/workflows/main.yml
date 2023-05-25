@@ -16,10 +16,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@main
 
-#     - name: Set up Xcode
-#       uses: actions/setup-xcode@v2
-#       with:
-#         xcode-version: 14.3
+    - name: Set up Xcode
+      uses: actions/setup-xcode@v2
+      with:
+        xcode-version: 14.3
 
     - name: Install dependencies
       run: |
@@ -30,4 +30,4 @@ jobs:
       run: xcodebuild clean build -workspace CleverTapSDK.xcworkspace -scheme CleverTapSDK
 
     - name: Run tests
-      run: xcodebuild clean test -project CleverTapSDK.xcodeproj -scheme CleverTapSDKTests -destination 'platform=iOS Simulator,name=iPhone 14'
+      run: xcodebuild test -workspace CleverTapSDK.xcworkspace -scheme CleverTapSDKTests -destination 'platform=iOS Simulator,name=iPhone 14'
