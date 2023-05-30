@@ -43,8 +43,8 @@ jobs:
             echo "Invalid PR title format. Please use 'SDK-{number}' format."
           fi
           
-          PR_Description=${{ github.event.pull_request.description }}
-          if [[ ! $PR_Description =~ "" ]]; then
+          PR_DESCRIPTION=${{ github.event.pull_request.body }}
+          if [[ -z "$PR_DESCRIPTION" ]]; then
             echo "Invalid PR Description format. Please add valid description."
           fi
 
