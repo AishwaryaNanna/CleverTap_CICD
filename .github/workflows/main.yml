@@ -7,6 +7,7 @@ on:
   pull_request:
     types:
       - opened
+      - updated
       - synchronize
     branches:
       - main
