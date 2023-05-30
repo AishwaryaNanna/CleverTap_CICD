@@ -7,9 +7,11 @@ runs:
       with:
         filters: |
           md: ['CHANGELOG.md']
+          podspec: ['CleverTap-iOS-SDK.podspec']
+          h: ['CleverTapBuildInfo.h']
 
     - name: FAIL if mandatory files are not changed
-      if: ${{ steps.filter.outputs.md == 'false' }}
+      if: ${{ steps.filter.outputs.md == 'false' || steps.filter.outputs.podspec == 'false' || steps.filter.outputs.h == 'false'}}
       uses: actions/github-script@v6
       with:
         script: |
