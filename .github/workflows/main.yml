@@ -52,5 +52,17 @@ jobs:
           fi
 #       run: echo "PR title is ${{ github.event.pull_request.body }}"
 
+#     - name: Check Mandatory File Changes
+#       run: |
+#           mandatory_files=("path/to/file1.txt" "path/to/file2.txt")
+
+#           if git diff --name-only HEAD^..HEAD -- "${mandatory_files[@]}" | grep -q .; then
+#             echo "Mandatory file changes found."
+#           else
+#             echo "No mandatory file changes found."
+#             exit 1
+#           fi
+    - name: Mandatory File Changes
+      uses: ./.github/mini_flows/mandatory_filechanges
 
 
