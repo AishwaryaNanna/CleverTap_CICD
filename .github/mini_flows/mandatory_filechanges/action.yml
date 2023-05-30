@@ -10,7 +10,7 @@ runs:
 
     - name: FAIL if mandatory files are not changed
       if: ${{ steps.filter.outputs.md == 'false' }}
-      uses: actions/github-script@v3
+      uses: actions/github-script@v6
       with:
         script: |
           core.setFailed('Mandatory markdown files were not changed')
