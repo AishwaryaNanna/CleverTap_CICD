@@ -41,13 +41,8 @@ jobs:
           PR_TITLE=${{ github.event.pull_request.title }}
           if [[ ! $PR_TITLE =~ ^SDK-[0-9]+ ]]; then
             echo "Invalid PR title format. Please use 'SDK-{number}' format."
-            exit 1
           fi
-#       run: echo "PR title is ${{ github.event.pull_request.title }}"
 
-#       uses: dylanvann/check-pull-request-title@v0.1.14
-#       with:
-#           # Match pull request titles in the form UI-1234 - Message.
-#           pattern: '^SDK-\d* - '
+
 
 
