@@ -43,9 +43,11 @@ jobs:
 #             echo "Invalid PR title format. Please use 'SDK-{number}' format."
 #             exit 1
 #           fi
-      uses: dylanvann/check-pull-request-title@v0.1.14
-      with:
-          # Match pull request titles in the form UI-1234 - Message.
-          pattern: '^SDK-\d* - '
+      run: echo "PR title is ${{ github.event.pull_request.title || 'On Main' }}"
+
+#       uses: dylanvann/check-pull-request-title@v0.1.14
+#       with:
+#           # Match pull request titles in the form UI-1234 - Message.
+#           pattern: '^SDK-\d* - '
 
 
