@@ -37,13 +37,13 @@ jobs:
 #       run: xcodebuild test -workspace CleverTapSDK.xcworkspace -scheme CleverTapSDKTests -destination 'platform=iOS Simulator,name=iPhone 14'
     
     - name: Validate PR Title
-#       run: |
-#           PR_TITLE=$(git log --format=%s -1 ${{ github.event.pull_request.head.sha }})
-#           if [[ ! $PR_TITLE =~ ^SDK-[0-9]+ ]]; then
-#             echo "Invalid PR title format. Please use 'SDK-{number}' format."
-#             exit 1
-#           fi
-      run: echo "PR title is ${{ github.event.pull_request.title }}"
+      run: |
+          PR_TITLE=${{ github.event.pull_request.title }}
+          if [[ ! $PR_TITLE =~ ^SDK-[0-9]+ ]]; then
+            echo "Invalid PR title format. Please use 'SDK-{number}' format."
+            exit 1
+          fi
+#       run: echo "PR title is ${{ github.event.pull_request.title }}"
 
 #       uses: dylanvann/check-pull-request-title@v0.1.14
 #       with:
