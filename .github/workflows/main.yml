@@ -43,7 +43,7 @@ jobs:
 #             echo "Invalid PR title format. Please use 'SDK-{number}' format."
 #             exit 1
 #           fi
-      run: echo "PR title is $(git log --format=%s -1 ${{ github.event.pull_request.head.sha }})"
+      run: echo "PR title is $(git log --format=%s -1 ${{ github.event.pull_request.title }})"
 
 #       uses: dylanvann/check-pull-request-title@v0.1.14
 #       with:
