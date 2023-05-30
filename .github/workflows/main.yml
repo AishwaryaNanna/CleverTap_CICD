@@ -44,7 +44,7 @@ jobs:
           fi
           
           PR_DESCRIPTION=${{ github.event.pull_request.body }}
-          if [[ $PR_DESCRIPTION == 0 ]]; then
+          if [[ -z "$PR_DESCRIPTION" ]]; then
             echo "Invalid PR Description format. Please add valid description."
           fi
 
