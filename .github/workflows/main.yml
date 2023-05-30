@@ -46,7 +46,7 @@ jobs:
     - name: Validate PR Description
       run: |
           PR_DESCRIPTION=${{ github.event.pull_request.body }}
-          if [[ -z "$PR_DESCRIPTION" ]]; then
+          if [[ $PR_DESCRIPTION ]]; then
             echo "Invalid PR Description format. Please add valid description."
           fi
 #       run: echo "PR title is ${{ github.event.pull_request.body }}"
