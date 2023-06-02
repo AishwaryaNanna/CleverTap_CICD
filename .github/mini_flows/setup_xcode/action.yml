@@ -1,0 +1,7 @@
+ runs:
+  using: "composite"
+  steps: 
+    - name: Set up Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: 14.2.0
