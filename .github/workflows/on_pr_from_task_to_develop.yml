@@ -4,8 +4,8 @@ on:
   pull_request:
     types:
       - opened
-#       - edited
-#       - synchronize
+      - edited
+      - synchronize
     branches:
       - develop
 
@@ -37,7 +37,7 @@ jobs:
       run: |
           PR_TITLE=${{ github.event.pull_request.title }}
           if [[ ! $PR_TITLE =~ ^SDK-[0-9]+ ]]; then
-            echo "Invalid PR title format. Please use 'SDK-{number}' format."
+            echo "::warning ::Invalid PR title format. Please use 'SDK-{number}' format."
           fi
           
     - name: Validate PR Description
