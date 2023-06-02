@@ -1,0 +1,5 @@
+runs:
+  using: "composite"
+  steps:
+    - name: Build project
+      run: xcodebuild clean build -workspace CleverTapSDK.xcworkspace -scheme CleverTapSDK
