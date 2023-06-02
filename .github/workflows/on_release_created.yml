@@ -1,0 +1,20 @@
+name: Release version to Pod
+on:
+  release:
+    types:
+      - created
+      
+jobs:
+  build:
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Lint
+      run: |
+        pod spec lint CleverTap-iOS-SDK.podspec
+    - name: Publish to CocoaPod register
+      env:
+        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+      run: |
+        pod trunk push CleverTap-iOS-SDK.podspec
