@@ -23,8 +23,8 @@ jobs:
     - name: Set up Xcode
       uses: ./.github/mini_flows/setup_xcode  
 
-#     - name: Install dependencies
-#       uses: ./.github/mini_flows/install_dependencies
+    - name: Install dependencies
+      uses: ./.github/mini_flows/install_dependencies
 
     - name: Build project
       uses: ./.github/mini_flows/build_project  
