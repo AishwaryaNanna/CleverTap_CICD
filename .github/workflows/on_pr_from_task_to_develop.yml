@@ -45,7 +45,7 @@ jobs:
           PR_DESCRIPTION: ${{ github.event.pull_request.body }}
       run: |
           if [[ -z "$PR_DESCRIPTION" ]]; then
-            echo "Invalid PR Description format. Please add valid description."
+            echo "::warning ::Invalid PR Description format. Please add valid description."
           fi
    
    
