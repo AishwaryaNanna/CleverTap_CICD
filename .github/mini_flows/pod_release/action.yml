@@ -1,14 +1,6 @@
-name: Release version to Pod
-on:
-  release:
-    types:
-      - created
-      
-jobs:
-  build:
-    runs-on: macos-latest
-    
-    steps:
+runs:
+  using: "composite"
+  steps:
     - uses: actions/checkout@v1
     - name: Publish to CocoaPod register
       env:
