@@ -3,6 +3,5 @@ runs:
   steps:
      - name: Run Pod lib lint
        shell: bash
-       if: always()
        run: |
           pod lib lint --allow-warnings    
