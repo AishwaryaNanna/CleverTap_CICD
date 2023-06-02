@@ -1,0 +1,7 @@
+runs:
+  using: "composite"
+  steps:
+    - name: Install dependencies
+      run: |
+        sudo gem install cocoapods
+        pod install
