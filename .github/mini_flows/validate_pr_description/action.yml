@@ -2,6 +2,7 @@ runs:
   using: "composite"
   steps:
      - name: Validate PR Description
+       shell: bash
        env:
           PR_DESCRIPTION: ${{ github.event.pull_request.body }}
        run: |
