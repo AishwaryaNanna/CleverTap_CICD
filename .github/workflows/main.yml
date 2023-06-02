@@ -57,8 +57,6 @@ jobs:
       uses: ./.github/mini_flows/mandatory_filechanges
       
     - name: Run pod lib lint
-      if: always()
-      run: |
-          pod lib lint --allow-warnings
+      uses: ./.github/mini_flows/pod_lib_lint
 
 
