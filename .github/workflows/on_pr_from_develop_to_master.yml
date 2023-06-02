@@ -42,4 +42,8 @@ jobs:
 
     - name: Mandatory File Changes
       uses: ./.github/mini_flows/mandatory_filechanges
+      
+    - name: Run pod lib lint
+      uses: ./.github/mini_flows/pod_lib_lint
+      
 
