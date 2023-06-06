@@ -8,4 +8,5 @@ runs:
      - uses: kishikawakatsumi/xcresulttool@v1
        with:
          path: '/Users/runner/work/CleverTap_CICD/CleverTap_CICD/TestResults.xcresult'
+         show-code-coverage: true
        if: success() || failure()
