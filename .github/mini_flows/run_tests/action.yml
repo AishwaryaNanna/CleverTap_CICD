@@ -5,7 +5,7 @@ runs:
        shell: bash
        run: xcodebuild test -workspace CleverTapSDK.xcworkspace -scheme CleverTapSDKTests -resultBundlePath TestResults -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' 
        
-       uses: kishikawakatsumi/xcresulttool@v1
+     - uses: kishikawakatsumi/xcresulttool@v1
        with:
          path: TestResults.xcresult
        if: success() || failure()
