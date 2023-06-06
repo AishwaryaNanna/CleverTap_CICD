@@ -32,7 +32,7 @@ jobs:
     - name: Validate PR Title
       run: |
           PR_TITLE=${{ github.event.pull_request.title }}
-          if [[ "$PR_TITLE" != "SDK-"* ]]; then
+          if: "!startsWith(github.event.pull_request.title, 'SDK-')"; then
             echo "::warning ::Invalid PR title format. Please use 'SDK-{number}' format."
           fi
           
