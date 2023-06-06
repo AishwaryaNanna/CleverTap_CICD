@@ -17,17 +17,17 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@main
 
-#     - name: Set up Xcode
-#       uses: ./.github/mini_flows/setup_xcode  
+    - name: Set up Xcode
+      uses: ./.github/mini_flows/setup_xcode  
 
-#     - name: Install dependencies
-#       uses: ./.github/mini_flows/install_dependencies
+    - name: Install dependencies
+      uses: ./.github/mini_flows/install_dependencies
 
-#     - name: Build project
-#       uses: ./.github/mini_flows/build_project  
+    - name: Build project
+      uses: ./.github/mini_flows/build_project  
 
-#     - name: Run tests
-#       uses: ./.github/mini_flows/run_tests  
+    - name: Run tests
+      uses: ./.github/mini_flows/run_tests  
     
     - name: Validate PR Title
       run: |
