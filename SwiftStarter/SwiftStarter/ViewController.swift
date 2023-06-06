@@ -16,6 +16,8 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate, Cl
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //test code for validating PR
+        
         CleverTap.sharedInstance()?.setPushPermissionDelegate(self)
         loadData()
         registerAppInbox()
