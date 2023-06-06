@@ -7,6 +7,6 @@ runs:
        
      - uses: kishikawakatsumi/xcresulttool@v1
        with:
-         path: TestResults.xcresult
+         path: '/Users/runner/work/CleverTap_CICD/CleverTap_CICD/TestResults.xcresult'
          token: ${{ secrets.GITHUB_TOKEN }}
        if: success() || failure()
