@@ -20,23 +20,23 @@ jobs:
     - name: Set up Xcode
       uses: ./.github/mini_flows/setup_xcode  
 
-#     - name: Install dependencies
-#       uses: ./.github/mini_flows/install_dependencies
+    - name: Install dependencies
+      uses: ./.github/mini_flows/install_dependencies
 
-#     - name: Build project
-#       uses: ./.github/mini_flows/build_project  
+    - name: Build project
+      uses: ./.github/mini_flows/build_project  
 
-#     - name: Run tests
-#       uses: ./.github/mini_flows/run_tests  
+    - name: Run tests
+      uses: ./.github/mini_flows/run_tests  
     
-#     - name: Validate PR Title
-#       run: |
-#           PR_TITLE=${{ github.event.pull_request.title }}
-#           if [[ ! $PR_TITLE =~ ^(SDK-)[\w\-\s]+$ ]]; then
-#             echo "::warning ::Invalid PR title format. Please use 'SDK-{number}' format."
-#           fi
+    - name: Validate PR Title
+      run: |
+          PR_TITLE=${{ github.event.pull_request.title }}
+          if [[ ! $PR_TITLE =~ ^(SDK-)[\w\-\s]+$ ]]; then
+            echo "::warning ::Invalid PR title format. Please use 'SDK-{number}' format."
+          fi
           
-#     - name: Validate PR Description
-#       uses: ./.github/mini_flows/validate_pr_description
+    - name: Validate PR Description
+      uses: ./.github/mini_flows/validate_pr_description
    
    
